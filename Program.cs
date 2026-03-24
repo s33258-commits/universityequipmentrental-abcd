@@ -81,9 +81,7 @@ Console.WriteLine(rentalService.ReturnEquipment(1).Message);
 Console.WriteLine();
 Console.WriteLine("CREATING OVERDUE LOAN FOR DEMO...");
 
-// żeby można było dodać przeterminowane wypożyczenie, sprzęt musi być oznaczony jako wypożyczony
 laptop2.MarkAsBorrowed();
-
 var overdueLoan = new Loan(employee, laptop2, DateTime.Now.AddDays(-10), 5);
 loans.Add(overdueLoan);
 
